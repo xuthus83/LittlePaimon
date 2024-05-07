@@ -1,4 +1,4 @@
-FROM python:3-slim-bullseye
+FROM python:3.8-slim-bullseye
 
 RUN pip3 --no-cache-dir install nb-cli
 
