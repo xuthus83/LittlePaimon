@@ -1,4 +1,5 @@
 name: littlePaimon
+on: [push]
 on: 
   push:
     branches:    
