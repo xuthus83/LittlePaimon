@@ -1,9 +1,9 @@
 name: littlePaimon
 on: [push]
-on: 
-  push:
-    branches:    
-      - Bot
+# on: 
+#   push:
+#     branches:    
+#       - Bot
 
 # 工作流程，可包含多个作业
 jobs:
