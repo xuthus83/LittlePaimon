@@ -1,4 +1,4 @@
---index-url https://mirrors.aliyun.com/pypi/simple
+
 
 aiosqlite==0.17.0 ; python_version >= "3.8" and python_version < "4.0"
 amis-python==1.0.8.post2 ; python_version >= "3.8" and python_version < "4.0"
