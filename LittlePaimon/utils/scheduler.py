@@ -9,6 +9,8 @@ from pydantic import Field, BaseSettings
 class Config(BaseSettings):
     apscheduler_autostart: bool = True
     apscheduler_log_level: int = 30
+    amis_cdn: str = "https://npm.onmicrosoft.cn"
+    amis_pkg: str = "amis@6.3.0"
     apscheduler_config: dict = Field(
         default_factory=lambda: {"apscheduler.timezone": "Asia/Shanghai"}
     )
