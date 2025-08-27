@@ -109,7 +109,7 @@ async def sr_wiki_got(matcher: Matcher,
             data_path = wiki_data[TYPE_MAP[type]][id_]
             try:
                 await wiki.finish(MessageSegment.image(
-                    f'{config.github_proxy}https://raw.githubusercontent.com/Nwflower/star-rail-atlas/master{data_path}'.replace(" ", "%20")
+                    f'https://raw.githubusercontent.com/Nwflower/star-rail-atlas/master{data_path}'.replace(" ", "%20")
                 ))
             except ActionFailed:
                 await wiki.finish(f'{alias[0]}的{type}发送失败，可能是网络问题')
@@ -124,10 +124,10 @@ async def sr_wiki_got(matcher: Matcher,
 async def init_data():
     try:
         resp = await aiorequests.get(
-            f'{config.github_proxy}https://raw.githubusercontent.com/Nwflower/star-rail-atlas/master/path.json')
+            f'https://raw.githubusercontent.com/Nwflower/star-rail-atlas/master/path.json')
         wiki_data.update(resp.json())
         resp2 = await aiorequests.get(
-            f'{config.github_proxy}https://raw.githubusercontent.com/Nwflower/star-rail-atlas/master/othername.json')
+            f'https://raw.githubusercontent.com/Nwflower/star-rail-atlas/master/othername.json')
         name_map.update(resp2.json())
         global last_update_time
         last_update_time = datetime.datetime.now()
