@@ -1,6 +1,6 @@
 FROM docker.1ms.run/python:3.8-slim-bullseye
 
-RUN pip3 --no-cache-dir install--default-timeout=60 nb-cli
+RUN pip3 --no-cache-dir install --default-timeout=60 nb-cli
 
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
