@@ -1,4 +1,4 @@
-FROM python:3.8-slim-bullseye
+FROM docker.1ms.run/python:3.8-slim-bullseye
 
 RUN pip3 --no-cache-dir install -i http://mirrors.cloud.aliyuncs.com/pypi/simple/ --trusted-host mirrors.cloud.aliyuncs.com --default-timeout=60 nb-cli
 
