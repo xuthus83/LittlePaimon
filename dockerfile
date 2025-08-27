@@ -1,5 +1,6 @@
 FROM python:3.8-slim-bullseye
 
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN pip3 --no-cache-dir install nb-cli
 
 ENV TZ=Asia/Shanghai \
