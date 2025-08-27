@@ -1,6 +1,6 @@
 FROM docker.1ms.run/python:3.8-slim-bullseye
 
-RUN pip3 --no-cache-dir install -i http://mirrors.cloud.aliyuncs.com/pypi/simple/ --trusted-host mirrors.cloud.aliyuncs.com --default-timeout=60 nb-cli
+RUN pip3 --no-cache-dir install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --trusted-host mirrors.tuna.tsinghua.edu.cn --default-timeout=60 nb-cli
 
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
@@ -17,7 +17,7 @@ WORKDIR /data/pkg
 COPY . .
 
 RUN sed -i 's/^\-\-index\-url\s.*$//' requirements.txt && \
-    pip3 install --no-cache-dir -i http://mirrors.cloud.aliyuncs.com/pypi/simple/ --trusted-host mirrors.cloud.aliyuncs.com --default-timeout=60 -r requirements.txt
+    pip3 install --no-cache-dir -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --trusted-host mirrors.tuna.tsinghua.edu.cn --default-timeout=60 -r requirements.txt
 
 RUN playwright install-deps && \
     playwright install chromium && \
